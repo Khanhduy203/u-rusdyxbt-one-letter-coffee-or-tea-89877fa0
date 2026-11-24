@@ -10,4 +10,6 @@ const outputDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 const entryPath = join(outputDir, "entry.txt");
 
 mkdirSync(outputDir, { recursive: true });
+// "A" is the coffee choice per the competition rules; write it as the
+// file's only byte — no trailing newline, so the gate sees exactly 1 char.
 writeFileSync(entryPath, "A", "utf8");
